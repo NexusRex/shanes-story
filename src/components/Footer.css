@@ -1,0 +1,82 @@
+.footer {
+    background-color: #111;
+    /* dark cinematic background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    border-top: 1px solid #333;
+    /* subtle separation */
+}
+
+/* Center column */
+.footer-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.movie-title {
+    font-weight: 600;
+}
+
+.creator {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+/* Right column */
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    text-align: right;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.contact-block .name {
+    font-weight: 600;
+}
+
+.contact-block .role {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.contact-block a {
+    color: #e50914;
+    /* cinematic red */
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+.contact-block a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive: stack everything for small screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+
+    .footer-right {
+        align-items: center;
+        text-align: center;
+    }
+}
