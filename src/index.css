@@ -5,11 +5,21 @@
   padding: 0;
 }
 
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 html,
-body {
-  width: 100%;
-  min-height: 100%;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
   background-color: #000;
 }
 
