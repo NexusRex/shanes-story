@@ -1,24 +1,27 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
+    const getLinkClass = ({ isActive }) => isActive ? "active" : "";
+
     return (
         <nav className="navbar">
-            <Link to="/" className="logo">Shane’s Story</Link>
+            <NavLink to="/" className="logo">Shane’s Story</NavLink>
 
             {/* Desktop links */}
             <div className="nav-links">
-                <Link to="/about">About</Link>
-                <Link to="/gallery">Gallery</Link>
-                <Link to="/contact">Contact</Link>
+                <NavLink to="/" className={getLinkClass}>Home</NavLink>
+                <NavLink to="/about" className={getLinkClass}>About</NavLink>
+                <NavLink to="/gallery" className={getLinkClass}>Gallery</NavLink>
+                <NavLink to="/contact" className={getLinkClass}>Contact</NavLink>
             </div>
 
             {/* Mobile hamburger */}
             <button
-                className="menu-toggle"
+                className={`menu-toggle ${open ? "open" : ""}`}
                 onClick={() => setOpen(!open)}
                 aria-label="Toggle menu"
             >
@@ -28,9 +31,10 @@ export default function Navbar() {
             {/* Mobile menu */}
             {open && (
                 <div className="mobile-menu">
-                    <Link to="/about" onClick={() => setOpen(false)}>About</Link>
-                    <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
-                    <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+                    <NavLink to="/" className={getLinkClass} onClick={() => setOpen(false)}>Home</NavLink>
+                    <NavLink to="/about" className={getLinkClass} onClick={() => setOpen(false)}>About</NavLink>
+                    <NavLink to="/gallery" className={getLinkClass} onClick={() => setOpen(false)}>Gallery</NavLink>
+                    <NavLink to="/contact" className={getLinkClass} onClick={() => setOpen(false)}>Contact</NavLink>
                 </div>
             )}
         </nav>

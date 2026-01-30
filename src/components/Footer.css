@@ -15,7 +15,6 @@
     transition: opacity 0.8s ease, transform 0.8s ease;
 
     position: relative;
-    overflow: hidden;
 }
 
 .footer::after {
@@ -108,7 +107,6 @@
     text-decoration: underline;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;

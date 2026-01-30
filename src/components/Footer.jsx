@@ -29,7 +29,7 @@ export default function Footer() {
                 <span className="creator">
                     Website by{" "}
                     <a
-                        href="https://github.com/tristancable"
+                        href="https://www.linkedin.com/in/tristan-cable-5aa17527a/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

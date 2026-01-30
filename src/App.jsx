@@ -5,22 +5,31 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import "./app.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="app">
+    <div className="app">
+      <BrowserRouter>
         <Navbar />
-        <main className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+
+        <div className="main-content">
+          <section className="background">
+            <div className="overlay">
+              <main className="content">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+              </main>
+            </div>
+          </section>
+        </div>
+
         <Footer />
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
