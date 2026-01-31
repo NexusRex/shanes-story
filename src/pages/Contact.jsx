@@ -20,6 +20,16 @@ export default function Contact() {
             }),
         });
 
+        // const res = await fetch("http://localhost:3001/contact", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify({
+        //         name: formData.get("name"),
+        //         email: formData.get("email"),
+        //         message: formData.get("message"),
+        //     }),
+        // });
+
         if (res.ok) {
             setStatus("Message sent!");
             e.target.reset();
