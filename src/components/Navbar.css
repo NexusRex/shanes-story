@@ -1,7 +1,12 @@
+
+
 .navbar {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 1rem);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -115,6 +120,7 @@
     .navbar {
         background: rgba(0, 0, 0, 0.75);
         backdrop-filter: blur(8px);
+        width: calc(100% - 0rem);
     }
 
     .mobile-menu {

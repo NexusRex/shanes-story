@@ -1,9 +1,17 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .contact-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 1rem;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-form {
@@ -13,7 +21,7 @@
     flex-direction: column;
     gap: 1.2rem;
     background: rgba(0, 0, 0, 0.7);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 12px;
     color: white;
 }
@@ -48,4 +56,15 @@
     text-align: center;
     font-size: 0.95rem;
     opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+    .contact-page {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+        max-width: 100%;
+    }
 }
