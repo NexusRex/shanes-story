@@ -1,37 +1,49 @@
+/* ---------------- Reset & Box Sizing ---------------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ---------------- HTML & Body ---------------- */
 html,
 body,
 #root {
   height: 100%;
-  margin: 0;
   width: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  width: 100%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- App Container ---------------- */
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 0;
 }
 
+/* ---------------- Main Content ---------------- */
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
+/* ---------------- Background Section ---------------- */
 .background {
   flex: 1;
   width: 100%;
@@ -41,10 +53,11 @@ body {
   display: flex;
 }
 
+/* ---------------- Overlay Section ---------------- */
 .overlay {
   flex: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.75));
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75));
   color: white;
   display: flex;
   flex-direction: column;
@@ -54,6 +67,7 @@ body {
   padding: 2rem 1.25rem;
 }
 
+/* ---------------- Content Wrapper ---------------- */
 .content {
   width: 100%;
   max-width: 1280px;

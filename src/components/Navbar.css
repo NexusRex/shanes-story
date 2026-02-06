@@ -1,27 +1,27 @@
-
-
 .navbar {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    width: calc(100% - 1rem);
+    width: 100%;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(6px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
 }
 
 .logo {
     font-family: "Playfair Display", serif;
     color: white;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     letter-spacing: 0.8px;
     text-decoration: none;
+    align-items: center;
 }
 
 .logo:hover {
@@ -34,10 +34,14 @@
     color: white;
     margin-left: 1.75rem;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 0.4px;
     opacity: 0.85;
     padding-bottom: 4px;
+    transition:
+        color 0.25s ease,
+        transform 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+        text-shadow 0.25s ease;
 }
 
 .nav-links a::after {
@@ -56,8 +60,36 @@
     width: 100%;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a:hover {
+    color: #f5e6c8;
+    transform: scale(1.05) translateY(-2px);
+    text-shadow:
+        0 0 4px rgba(255, 240, 180, 0.6),
+        0 0 8px rgba(255, 240, 180, 0.45);
+}
+
+.nav-links a:hover {
+    animation: navGlowPulse 1.2s infinite alternate;
+}
+
+@keyframes navGlowPulse {
+    0% {
+        text-shadow:
+            0 0 2px rgba(255, 240, 180, 0.4),
+            0 0 6px rgba(255, 240, 180, 0.25);
+    }
+
+    50% {
+        text-shadow:
+            0 0 6px rgba(255, 240, 180, 0.6),
+            0 0 12px rgba(255, 240, 180, 0.45);
+    }
+
+    100% {
+        text-shadow:
+            0 0 4px rgba(255, 240, 180, 0.5),
+            0 0 10px rgba(255, 240, 180, 0.35);
+    }
 }
 
 .menu-toggle {
