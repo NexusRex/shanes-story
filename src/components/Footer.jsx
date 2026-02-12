@@ -49,13 +49,6 @@ export default function Footer() {
                     <a href="mailto:actorblake@yahoo.com">actorblake@yahoo.com</a>
                     <a href="tel:+18186693649">(818) 669-3649</a>
                 </div>
-
-                <div className="contact-line">
-                    <span className="name">Nicole Cable</span>
-                    <span className="role">Producer</span>
-                    <a href="mailto:ncable1979@gmail.com">ncable1979@gmail.com</a>
-                    <a href="tel:+15305142188">(530) 514-2188</a>
-                </div>
             </div>
         </footer>
     );
