@@ -10,7 +10,7 @@ export default function Home() {
             </p>
 
             <a
-                href="https://seedandspark.com"
+                href="https://connect.clickandpledge.com/w/Form/e2b4ab57-c379-45c5-8389-a468a7b0e9e2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fundraising-btn fade-in delay-2"
